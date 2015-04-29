@@ -24,17 +24,17 @@ from ROOT.heppy import AlphaT
 
 import os
 
-class ttHAlphaTVarAnalyzer( Analyzer ):
+class AlphaTAnalyzer( Analyzer ):
     def __init__(self, cfg_ana, cfg_comp, looperName ):
-        super(ttHAlphaTVarAnalyzer,self).__init__(cfg_ana,cfg_comp,looperName) 
+        super(AlphaTAnalyzer,self).__init__(cfg_ana,cfg_comp,looperName) 
 
     def declareHandles(self):
-        super(ttHAlphaTVarAnalyzer, self).declareHandles()
+        super(AlphaTAnalyzer, self).declareHandles()
        #genJets                                                                                                                                                                     
         self.handles['genJets'] = AutoHandle( 'slimmedGenJets','std::vector<reco::GenJet>')
 
     def beginLoop(self,setup):
-        super(ttHAlphaTVarAnalyzer,self).beginLoop(setup)
+        super(AlphaTAnalyzer,self).beginLoop(setup)
         self.counters.addCounter('pairs')
         count = self.counters.counter('pairs')
         count.register('all events')
