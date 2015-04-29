@@ -90,11 +90,11 @@ isoTrackAna.setOff=False
 ##  ALPHAT VARIABLES
 ##------------------------------------------
 
-from CMGTools.TTHAnalysis.analyzers.ttHAlphaTVarAnalyzer import ttHAlphaTVarAnalyzer
+from PhysicsTools.Heppy.analyzers.eventtopology import AlphaTAnalyzer
 from CMGTools.TTHAnalysis.analyzers.ttHAlphaTControlAnalyzer import ttHAlphaTControlAnalyzer
 # Tree Producer
 ttHAlphaTAna = cfg.Analyzer(
-            ttHAlphaTVarAnalyzer, name='ttHAlphaTVarAnalyzer'
+            AlphaTAnalyzer, name='AlphaTAnalyzer'
             )
 
 ttHAlphaTControlAna = cfg.Analyzer(
